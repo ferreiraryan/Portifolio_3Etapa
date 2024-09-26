@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing:auto;
+
+    font-style: normal;
+    background-color: #152B25;
+    color: #D7FFF5;
+    height: 700vh;
+}
+
+header{
+    /* position: sticky; */
+    font-size: 1.8em;
+    padding: 20px 20%;
+    display: flex;
+    
+}
+
+.HeaderButtons{
+    padding: 0 20px;
+}
+
+#HeaderSpace{
+    width: 60%;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.322);
+    background-blend-mode: multiply;
+    background-image: url(imgs/fundo\ 1.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#TextMain{
+
+}
