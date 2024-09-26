@@ -48,8 +48,31 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-#TextMain{
+#TextMain H1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em
+}
+#TextMain H2{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2em;
+}
 
+#ButtonsMain{
+    display: flex;
+    flex-direction: row;
+}
+.MainButton{
+    margin: 0px 20px;
+    border-radius: 9px;
+    padding: 10px;
+    background-color: #00487C;
 }
