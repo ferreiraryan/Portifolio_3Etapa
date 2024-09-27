@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-
+i{
+    color: white;
+}
 
 body{
     font-family: "Jaro", sans-serif;
@@ -25,6 +27,7 @@ header{
     
 }
 
+
 .HeaderButtons{
     padding: 0 20px;
 }
@@ -43,12 +46,11 @@ header{
 }
 
 #mainText{
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    padding: 15% 20%;
+
 }
 
 #TextMain H1{
@@ -62,17 +64,209 @@ header{
     line-height: 1em;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
+    font-weight: lighter;
     font-style: normal;
     font-size: 2em;
 }
 
 #ButtonsMain{
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
 }
 .MainButton{
+    font-size: 2em;
     margin: 0px 20px;
     border-radius: 9px;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #00487C;
 }
+
+#Divisoria{
+    padding-left: 20%;
+    top: 96.5%;
+    position: absolute;
+}
+
+
+#projetos{
+    width: 100%;
+    height: 100vh;
+    padding: 2% 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.322);
+    background-blend-mode: multiply;
+
+}
+
+#projetos h1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em
+}
+
+#protejos_imgs{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    'Projeto1 Projeto2 Projeto3'
+    'Projeto1 Projeto4 Projeto4';
+    gap: 20px;
+    padding: 5% 0;
+}
+
+#projeto1{
+    grid-area: Projeto1;
+}
+#projeto2{
+    grid-area: Projeto2;
+}
+#projeto3{
+    grid-area: Projeto3;
+}
+#projeto4{
+    grid-area: Projeto4;
+}
+.projetoarea{
+    background-color: #D7FFF5;
+    border-radius: 9px;
+}
+
+#About-me{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#About_container{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 90%;
+    border-radius: 9px;
+    background-color: #9ea196;
+    padding: 0 3%;
+    
+}
+
+#foto{
+    width: 35%;
+    height: 80%;
+    background-color: #D7FFF5;
+    border-radius: 9px;
+    
+}
+
+#About-Text{
+    width: 65%;
+    height: 80%;
+    padding-left: 5%;
+}
+
+#About-Text h1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em;
+    color: #04251D;
+}
+#About-Text p{
+    padding-top: 20px;
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style:normal;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+}
+.linha2{
+    width: 70%;
+    margin-top: 20px;
+}
+.linha1{
+    width: 90%;
+    margin-top: 50px;
+}
+.LinhaDivAbout{
+    height: 2px;
+    
+    background-color: #D7FFF5;
+}
+#linhas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#skills{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+}
+#SkillBlueDiv{
+    display: flex;
+    justify-content: right;
+    padding-top: 20%;
+    padding-right: 10%;
+    margin-top: 10%;
+    background-color: #00487C;
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 30%;
+}
+#SkillBlueDiv p{
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 100px;
+
+}
+#TextSkills{
+
+    padding-top: 5%;
+}
+#TextSkills h1{
+    padding-left: 10%;
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em;
+    padding-bottom: 27%;
+    
+}
+
+#TextSkills form input[type=range]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    display: inline-block;
+    height: 0.5em;
+    position: relative;
+    left: 4em;
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    background-color: #D7FFF5;
+    
+}
+input::-webkit-slider-thumb {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+
+    background-color: #4070f4;
+    box-shadow: -315px 0 0 300px #4070f4;
+  }
+
