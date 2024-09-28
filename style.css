@@ -2,21 +2,38 @@
     margin: 0;
     padding: 0;
     outline: 0;
+    border: none;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: #D7FFF5;
+    transition: 0.9s;
+}
+a:hover{
+    color: rgb(60, 21, 97);
+}
+.fa-brands {
+    transition: 0.9s;
+}
+.fa-brands:hover{
+    color: rgb(60, 21, 97);
+}
+
 
 i{
     color: white;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
-
     font-style: normal;
     background-color: #152B25;
     color: #D7FFF5;
-    height: 700vh;
+    height: 100%;
 }
 
 header{
@@ -26,7 +43,6 @@ header{
     display: flex;
     
 }
-
 
 .HeaderButtons{
     padding: 0 20px;
@@ -58,7 +74,8 @@ header{
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 6em
+    font-size: 6em;
+    display: inline-block;
 }
 #TextMain H2{
     line-height: 1em;
@@ -68,11 +85,21 @@ header{
     font-style: normal;
     font-size: 2em;
 }
+#animatedText{
+    display: inline-block;
+}
+
+#animatedText{
+    height: 112px;
+}
 
 #ButtonsMain{
     padding-top: 50px;
     display: flex;
     flex-direction: row;
+}
+.MainButton:hover{
+    transform: scale(1.1);
 }
 .MainButton{
     font-size: 2em;
@@ -80,6 +107,7 @@ header{
     border-radius: 9px;
     padding: 10px 20px;
     background-color: #00487C;
+    transition: 0.9s;
 }
 
 #Divisoria{
@@ -98,7 +126,6 @@ header{
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.322);
     background-blend-mode: multiply;
-
 }
 
 #projetos h1{
@@ -135,6 +162,11 @@ header{
 .projetoarea{
     background-color: #D7FFF5;
     border-radius: 9px;
+    transition: 0.9s;
+}
+.projetoarea:hover{
+    transform: scale(1.1);
+    background-color: #f2fffc;
 }
 
 #About-me{
@@ -144,7 +176,6 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 #About_container{
     display: flex;
@@ -209,49 +240,12 @@ header{
     flex-direction: column;
 }
 
-#skills{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-}
-#SkillBlueDiv{
-    display: flex;
-    justify-content: right;
-    padding-top: 20%;
-    padding-right: 10%;
-    margin-top: 10%;
-    background-color: #00487C;
-    border-top-right-radius: 60%;
-    border-bottom-right-radius: 30%;
-}
-#SkillBlueDiv p{
-    font-size: 3em;
-    font-weight: 100;
-    line-height: 100px;
-
-}
-#TextSkills{
-
-    padding-top: 5%;
-}
-#TextSkills h1{
-    padding-left: 10%;
-    line-height: 1em;
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 6em;
-    padding-bottom: 27%;
-    
-}
-
 #TextSkills form input[type=range]{
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     display: inline-block;
-    height: 0.5em;
+    height: 0.2em;
     position: relative;
     left: 4em;
     border-radius: 5px;
@@ -265,8 +259,170 @@ input::-webkit-slider-thumb {
     height: 18px;
     width: 18px;
     border-radius: 50%;
-
     background-color: #4070f4;
     box-shadow: -315px 0 0 300px #4070f4;
-  }
+}
+.SkillSpace{
+    margin-bottom: 18%;
+}
+.SkillBars{
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
+}
+.SkillBars form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.BarSkill{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.BarSkillBlue{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+.BarSkillBlue p{
+    width: 45%;
+}
 
+#skills{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#SkillBlueDiv{
+    display: flex;
+    justify-content: right;
+}
+#BlueDetail{
+    margin-top: 5%;
+    padding-right: 10%;
+    width: 40%;
+    height: 80%;
+    background-color: #00487C;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 50%;
+    position:absolute;
+    z-index: 0;
+  
+}
+#SkillBlueDiv p{
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 100px;
+
+}
+#TextSkills h1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em;
+}
+
+#Contact{
+    width: 100%;
+    height: 100vh;
+    background-color: #5c090909;
+    display: grid;
+    grid-template-areas: 
+    'Title Title'
+    'Form Message';
+    grid-template-rows: 1fr 3fr ;
+}
+#ContactTitle{
+    grid-area: Title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#ContactTitle h1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em;
+}
+#ContactForm{
+    grid-area: Form;
+}
+#ContactForm form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#ContactForm input[type=text], input[type=email]{
+    width: 70%;
+    height: 75px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    color: #000000;
+    background-color: #D7FFF5;
+    text-align: center;
+    font-size: 24px;
+}
+#ContactForm input[type=submit]{
+    width: 30%;
+    height: 75px;
+    border-radius: 9px;
+    margin-bottom: 20%;
+    font-size: 32px;
+    color: #D7FFF5;
+    background-color: #00487C;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing:auto;
+
+}
+#ContactMessage{
+    grid-area: Message;
+    display: flex;
+    align-items: center;
+}
+#ContactMessage textarea{
+    width: 70%;
+    height: 500px;
+    border-radius: 9px;
+    margin-bottom: 20%;
+    color: #000000;
+    background-color: #D7FFF5;
+    text-align: start;
+    font-size: 24px;
+    padding: 2%;
+}
+footer{
+    height: 40vh;
+    background-color: #061927;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#FooterLogos{
+    display: flex;
+    flex-direction: row;
+}
+#spacefooter{
+    width: 20px;
+}
+footer p{
+    font-size: 3em;
+}
+.fa-footer{
+    font-size: 5em;
+}
+footer img{
+    width: 50px;
+    padding-bottom: 20px;
+}

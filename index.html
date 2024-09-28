@@ -11,32 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/07f8344855.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="textAnimation()">
     
-    <section class="main">
+    <section class="main" >
         <header>
             <div class="HeaderButtons">
-                <p>Ryan</p>
+                <a href="#"><p>Ryan</p></a>
             </div class="HeaderButtons">
             
             <div id="HeaderSpace"></div>
     
             <div class="HeaderButtons">
-                <p>Home</p>
+                <a href="#projetos"><p>Projects</p></a>
             </div>
             <div class="HeaderButtons">
-                <p>About</p>
+                <a href="#About-me"><p>About</p></a>
             </div>
             <div class="HeaderButtons">
-                <p>Skills</p>
+                <a href="#skills"><p>Skills</p></a>
             </div>
     
             <div class="HeaderButtons">
-                <img src="imgs/icons8-instagram-32.png" alt="">
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
             <div class="HeaderButtons">
-                <img src="imgs/icons8-github-32.png" alt="">
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
         </header>
 
@@ -44,19 +50,23 @@
             <div>
                 <div id="TextMain">
                     <h2>HELLO!</h2>
-                    <h1>Esse é Ryan..</h1>
+                    <div id="animatedText" >
+                        <h1><span id="TextAnimation"></span></h1>
+                    </div>
+                    
                 </div>
             </div>
             
             <div id="ButtonsMain">
                 <div class="MainButton">
-                    Sites
+                    <a href="">Sites</a>
+                    
                 </div>
                 <div class="MainButton">
-                    Jogos
+                    <a href="">Jogos</a>
                 </div>
                 <div class="MainButton">
-                    Apps
+                    <a href="">Apps</a>
                 </div>
             </div>
 
@@ -94,16 +104,70 @@
     </section>
     <section id="skills">
         <div id="SkillBlueDiv">
-            <p>Python <br>c# <br>HTML/CSS <br>JavaScript <br>Photoshop <br>Linux</p>
+            <div id="BlueDetail"></div>
+            <div class="SkillBars">
+                <div class="BarSkillBlue"></div>
+                <div class="BarSkillBlue"><p>Python</p></div>
+                <div class="BarSkillBlue"><p>c#</p></div>
+                <div class="BarSkillBlue"><p>HTML/CSS </p></div>
+                <div class="BarSkillBlue"><p>JavaScript</p></div>
+                <div class="BarSkillBlue"><p>Photoshop </p></div>
+                <div class="BarSkillBlue"><p>Linux</p></div>
+                <div class="BarSkillBlue ultimabarra"></div>
+            </div>
+            
+            <!-- <p>Python <br>c# <br>HTML/CSS <br>JavaScript <br>Photoshop <br>Linux</p> -->
         </div>
         <div id="TextSkills">
-            <h1>Skills</h1>
-            <form action="">
-                <input type="range" id="campo" value="75" disabled/>
-            </form>
+            <div class="SkillBars">
+                <div class="BarSkill"><h1>Skills</h1></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="75" disabled/>
+                </form></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="25" disabled/>
+                </form></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="60" disabled/>
+                </form></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="30" disabled/>
+                </form></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="70" disabled/>
+                </form></div>
+                <div class="BarSkill"><form action="">
+                    <input type="range" id="campo" value="30" disabled/>
+                </form></div>
+                <div class="BarSkill ultimabarra"></div>
+            </div>
+            
         </div>
         <div></div>
     </section>
+    <section id="Contact">
+        <div id="ContactTitle"><h1>Entre em contato</h1></div>
+        <div id="ContactForm">
+            <form action="">
+                <input type="text" placeholder="Digite seu nome">
+                <input type="email" placeholder="Digite seu email">
+                <input type="submit">
+            </form>
+        </div>
+        <div id="ContactMessage">
+            <textarea name="" id="" placeholder="Digite sua mensagem"></textarea>
+        </div>
+    </section>
+    <footer>
+        <div id="FooterLogos">
+            <a href="#"><i class="fa-brands fa-instagram fa-footer"></i></a>
+           
+            <div id="spacefooter"></div>
+            <a href=""><i class="fa-brands fa-github fa-footer"></i></a>
+        </div>
+        <p>(31) 9 8580-0443</p>
+        <p>ryanferreira4883@gmail.com</p>
+    </footer>
     <i class="fa-brands fa-instagram"></i>
     
 </body>
