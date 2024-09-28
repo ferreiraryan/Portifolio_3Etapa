@@ -168,41 +168,36 @@ header{
     transform: scale(1.1);
     background-color: #f2fffc;
 }
-
+/* ABOUT */
 #About-me{
-    width: 100%;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+
 }
 #About_container{
+    margin: 5% 0;
+    width: 60%;
+    height: 70%;
+    background-color: #7C7E76;
+    border-radius: 9px;
+    display: grid;
+    grid-template-areas:'TitleA ImageA'
+                        'TextA TextA';
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
+}
+#TitleAbout{
+    grid-area: TitleA;
     display: flex;
-    align-items: center;
-    width: 70%;
-    height: 90%;
-    border-radius: 9px;
-    background-color: #9ea196;
-    padding: 0 3%;
-    
+    justify-content: center;
+    align-items: end;
 }
+#TitleAbout h1{
 
-#foto{
-    width: 35%;
-    height: 80%;
-    background-color: #D7FFF5;
-    border-radius: 9px;
-    
-}
-
-#About-Text{
-    width: 65%;
-    height: 80%;
-    padding-left: 5%;
-}
-
-#About-Text h1{
     line-height: 1em;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
@@ -210,16 +205,32 @@ header{
     font-size: 6em;
     color: #04251D;
 }
-#About-Text p{
-    padding-top: 20px;
+#ImageAbout{
+    grid-area: ImageA;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#ImageAbout img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+#TextAbout{
+    grid-area: TextA;
+}
+#TextAbout p{
+    margin: 5% 5%;
     line-height: 1em;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-style:normal;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
+
+
 .linha2{
     width: 70%;
     margin-top: 20px;
@@ -239,8 +250,9 @@ header{
     align-items: center;
     flex-direction: column;
 }
+/* Skills */
 
-#TextSkills form input[type=range]{
+/* #TextSkills form input[type=range]{
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -326,8 +338,11 @@ input::-webkit-slider-thumb {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 6em;
-}
+} */
 
+
+
+/* Contact */
 #Contact{
     width: 100%;
     height: 100vh;
@@ -425,4 +440,157 @@ footer p{
 footer img{
     width: 50px;
     padding-bottom: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1500px)  and (orientation: landscape){
+    #TitleAbout h1{
+
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 5em;
+        color: #04251D;
+    }
+
+}
+@media (max-width: 1350px ){
+
+    #SkillBlueDiv p{
+        font-size: 2em;
+        font-weight: 100;
+        line-height: 100px;
+    }
+}
+
+
+@media (max-width: 1230px ){
+    #TitleAbout h1{
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 4em;
+        color: #04251D;
+    }
+    #TextAbout p{
+        margin: 5% 5%;
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style:normal;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #000000;
+    }
+    #projetos h1{
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 4em
+    }
+    #protejos_imgs{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        'Projeto1 Projeto2'
+        'Projeto3 Projeto4';
+        gap: 20px;
+        padding: 5% 0;
+    }
+    
+}
+@media (max-width: 1000px){
+    #TitleAbout h1{
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 3em;
+        color: #04251D;
+    }
+    #TextMain H1{
+            line-height: 1em;
+            font-family: "Karla", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 5em;
+            display: inline-block;
+    }
+    #TextMain H2{
+        line-height: 1em;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        font-size: 2em;
+    }
+    /* Skills */
+    /* #skills{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0fr;
+        padding-right: 10%;
+    }
+    .SkillSpace{
+        margin-bottom: 18%;
+    }
+    .SkillBars{
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
+    }
+    .SkillBars form{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .BarSkill{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .BarSkillBlue{
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .BarSkillBlue p{
+        width: 45%;
+    }
+    
+    #SkillBlueDiv{
+        display: flex;
+        justify-content: right;
+    }
+    #BlueDetail{
+        margin-top: 5%;
+        padding-right: 10%;
+        width: 50%;
+        height: 80%;
+        background-color: #00487C;
+        border-top-right-radius: 80%;
+        border-bottom-right-radius: 50%;
+        position:absolute;
+        z-index: 0;
+      
+    }
+    #SkillBlueDiv p{
+        font-size: 3em;
+        font-weight: 100;
+        line-height: 100px;
+    
+    }
+    #TextSkills h1{
+        display: none;
+    } */
+
 }
