@@ -685,7 +685,10 @@ footer img{
         line-height: 100%;
     }
 }
-@media (max-height: 750px){
+
+
+
+@media (max-width: 600px){
     #BlueDetail{
         width: 45%;
         height: 32%;
@@ -697,9 +700,7 @@ footer img{
         z-index: 0;
     
     }
-}
 
-@media (max-width: 600px){
     #TextAbout p{
         font-size: 0.6em;
     }
