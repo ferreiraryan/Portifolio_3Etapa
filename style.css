@@ -320,34 +320,55 @@ header{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.BarSkill form{
-    height: 100%;
+.BarSkill{
     display: flex;
     align-items: center;
-    justify-content: center;
-
 }
-.BarSkill form input[type=range]{
-    -webkit-appearance: none;
-    appearance: none;
-    width: 90%;
-    display: inline-block;
+.BarSkillDiv{
     height: 0.2em;
-    left: 4em;
-    border-radius: 5px;
-    outline: none;
-    overflow: hidden;
+    width: 90%;
     background-color: #D7FFF5;
+}
+.BarSkillComplete{
+    height: 100%;
+    width: 50%;
+    background-color: #4070f4;
+}
+
+.animacaoSkillBar{
+    animation: progres 1s ease-in-out forwards;
+}
+
+
+.python{
+    width: 80%;
     
 }
-input::-webkit-slider-thumb {
-    appearance: none;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    background-color: #4070f4;
-    box-shadow: -315px 0 0 300px #4070f4;
+.csharp{
+    width: 40%;
 }
+.html{
+    width: 70%;
+}
+.js{
+    width: 50%;
+}
+.photoshop{
+    width: 60%;
+}
+.linux{
+    width: 30%;
+}
+
+@keyframes progres {
+    0%{
+        width: 0;
+    }
+}
+
+
+
+
 #SpaceSkills{
     grid-area: spaceSkills;
 }
