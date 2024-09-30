@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +28,7 @@ i{
 }
 html{
     scroll-behavior: smooth;
+    width: 100%;
 }
 body{
     font-family: "Jaro", sans-serif;
@@ -33,7 +36,9 @@ body{
     font-style: normal;
     background-color: #152B25;
     color: #D7FFF5;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden; 
 }
 
 header{
@@ -251,14 +256,83 @@ header{
     flex-direction: column;
 }
 /* Skills */
+#skills{
+    height: 100vh;
+}
 
-/* #TextSkills form input[type=range]{
+#ContainerSkills{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'Space titleSkills Space2'
+                        'textSkills rangeSkills spaceSkills';
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+                        
+
+}
+#TitleSkills{
+    grid-area: titleSkills;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#TitleSkills h1{
+    line-height: 1em;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 6em;
+    
+}
+#TextSkills{
+    grid-area: textSkills;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#BlueDetail{
+    width: 32%;
+    height: 80%;
+    background-color: #00487C;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 50%;
+    position:absolute;
+    z-index: 0;
+  
+}
+.BarSkillBlue{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 9;
+}
+
+.BarSkillBlue p{
+    width: 45%;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 100px;
+
+}
+#RangeSkills{
+    grid-area: rangeSkills;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.BarSkill form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.BarSkill form input[type=range]{
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 90%;
     display: inline-block;
     height: 0.2em;
-    position: relative;
     left: 4em;
     border-radius: 5px;
     outline: none;
@@ -274,73 +348,9 @@ input::-webkit-slider-thumb {
     background-color: #4070f4;
     box-shadow: -315px 0 0 300px #4070f4;
 }
-.SkillSpace{
-    margin-bottom: 18%;
+#SpaceSkills{
+    grid-area: spaceSkills;
 }
-.SkillBars{
-    z-index: 9;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
-}
-.SkillBars form{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.BarSkill{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
-.BarSkillBlue{
-    display: flex;
-    justify-content: flex-end;
-    align-self: center;
-}
-.BarSkillBlue p{
-    width: 45%;
-}
-
-#skills{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-#SkillBlueDiv{
-    display: flex;
-    justify-content: right;
-}
-#BlueDetail{
-    margin-top: 5%;
-    padding-right: 10%;
-    width: 40%;
-    height: 80%;
-    background-color: #00487C;
-    border-top-right-radius: 80%;
-    border-bottom-right-radius: 50%;
-    position:absolute;
-    z-index: 0;
-  
-}
-#SkillBlueDiv p{
-    font-size: 3em;
-    font-weight: 100;
-    line-height: 100px;
-
-}
-#TextSkills h1{
-    line-height: 1em;
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 6em;
-} */
-
-
 
 /* Contact */
 #Contact{
@@ -380,7 +390,7 @@ input::-webkit-slider-thumb {
 }
 #ContactForm input[type=text], input[type=email]{
     width: 70%;
-    height: 75px;
+    height: 10%;
     border-radius: 9px;
     margin-bottom: 20px;
     color: #000000;
@@ -407,7 +417,7 @@ input::-webkit-slider-thumb {
 }
 #ContactMessage textarea{
     width: 70%;
-    height: 500px;
+    height: 60%;
     border-radius: 9px;
     margin-bottom: 20%;
     color: #000000;
@@ -444,7 +454,10 @@ footer img{
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1500px)  and (orientation: landscape){
+@media (max-width: 1500px) {
+    #About_container{
+        height: 65%;
+    }
     #TitleAbout h1{
 
         line-height: 1em;
@@ -454,7 +467,33 @@ footer img{
         font-size: 5em;
         color: #04251D;
     }
-
+    .BarSkillBlue p{
+        width: 40%;
+        font-size: 2em;
+        font-weight: 100;
+        line-height: 100px;
+    
+    }
+    #TextSkills{
+        grid-area: textSkills;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    }
+    #RangeSkills{
+        grid-area: rangeSkills;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    }
+    #BlueDetail{
+        width: 32%;
+        height: 80%;
+        background-color: #00487C;
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 50%;
+        position:absolute;
+        z-index: 0;
+      
+    }
 }
 @media (max-width: 1350px ){
 
@@ -463,10 +502,22 @@ footer img{
         font-weight: 100;
         line-height: 100px;
     }
+    #About_container{
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1.5fr 1fr;
+    }
 }
 
 
 @media (max-width: 1230px ){
+    header{
+        padding: 0;
+        font-size: 1em;
+    }
+    #mainText{
+        font-size: 0.6rem;
+    }
+
     #TitleAbout h1{
         line-height: 1em;
         font-family: "Karla", sans-serif;
@@ -477,7 +528,7 @@ footer img{
     }
     #TextAbout p{
         margin: 5% 5%;
-        line-height: 1em;
+        line-height: 1rem;
         font-family: "Karla", sans-serif;
         font-optical-sizing: auto;
         font-style:normal;
@@ -486,6 +537,7 @@ footer img{
         color: #000000;
     }
     #projetos h1{
+        padding-top: 10%;
         line-height: 1em;
         font-family: "Karla", sans-serif;
         font-optical-sizing: auto;
@@ -502,7 +554,38 @@ footer img{
         gap: 20px;
         padding: 5% 0;
     }
+    /* Skills */
+
+
+    #ContainerSkills{
+        padding: 0 5%;
+        grid-template-areas: 'titleSkills titleSkills '
+                            'textSkills rangeSkills';
+        grid-template-rows: 1fr 4fr;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    #BlueDetail{
+        width: 50%;
+        height: 80%;
+        background-color: #00487C;
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 50%;
+        position:absolute;
+        left: 0;
+        z-index: 0;
     
+    }
+
+    .BarSkillBlue p{
+        width: 45%;
+        font-size: 2.5em;
+        font-weight: 100;
+        line-height: 100px;
+
+    }
+        
 }
 @media (max-width: 1000px){
     #TitleAbout h1{
@@ -529,68 +612,173 @@ footer img{
         font-style: normal;
         font-size: 2em;
     }
-    /* Skills */
-    /* #skills{
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr 0fr;
-        padding-right: 10%;
+    #About_container{
+        height: 60%;
     }
-    .SkillSpace{
-        margin-bottom: 18%;
+
+}
+
+@media (max-height: 900px){
+    #About_container{
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1.5fr 1fr;
     }
-    .SkillBars{
-        z-index: 9;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-rows: 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
+    #TextAbout p{
+        font-size: 1em;
     }
-    .SkillBars form{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    #ContactTitle h1{
+        font-size: 3em;
     }
-    .BarSkill{
-        display: flex;
-        justify-content: center;
-        align-self: center;
+    #projetos h1{
+        font-size: 3em;
     }
-    .BarSkillBlue{
-        display: flex;
-        justify-content: flex-end;
-        align-self: center;
+    
+}
+@media (max-height: 750px){
+    #About_container{
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    #TextAbout p{
+        font-size: 0.8em;
     }
     .BarSkillBlue p{
         width: 45%;
-    }
-    
-    #SkillBlueDiv{
-        display: flex;
-        justify-content: right;
-    }
-    #BlueDetail{
-        margin-top: 5%;
-        padding-right: 10%;
-        width: 50%;
-        height: 80%;
-        background-color: #00487C;
-        border-top-right-radius: 80%;
-        border-bottom-right-radius: 50%;
-        position:absolute;
-        z-index: 0;
-      
-    }
-    #SkillBlueDiv p{
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 100;
         line-height: 100px;
-    
-    }
-    #TextSkills h1{
-        display: none;
-    } */
 
+    }
+    #TextSkills{
+        grid-area: textSkills;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+        
+    }
+    #RangeSkills{
+        grid-area: rangeSkills;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    }
+    .BarSkillBlue p {
+        line-height: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    #TextAbout p{
+        font-size: 0.6em;
+    }
+    .BarSkillBlue p{
+        width: 45%;
+        font-size: 1.5em;
+        font-weight: 100;
+        line-height: 100%;
+
+    }
+    #TitleAbout h1{
+        font-size: 2em;
+    }
+    #projetos h1{
+        font-size: 2em;
+    }
+    footer p{
+        font-size: 2em;
+    }
+    .fa-footer{
+        font-size: 3em;
+
+    }
+}
+@media (max-width: 500px){
+    #TextMain H1{
+        font-size: 4em;
+    }
+    #ContactTitle h1 {
+        font-size: 2.2em;
+    }
+    #TitleSkills h1 {
+        font-size: 2.2em;
+    }
+    footer p{
+        font-size: 1em;
+    }
+    .fa-footer{
+        font-size: 2em;
+
+    }
+    .BarSkillBlue p {
+        width: 80%;
+    }
+    .main{
+        background-color: rgba(0, 0, 0, 0.781);
+        background-image: url(imgs/image\ 3.png) ;
+    }
+    #mainText{
+        padding: 10% 15%;
+    }
+    .hederleft{
+        display: none;
+    }
+    #ButtonsMain{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .MainButton{
+        display: flex;
+        margin: 5% 0%;
+        width: 40%;
+        height: 20%;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #projetos{
+        padding: 0 5%;
+    }
+    #protejos_imgs{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        'Projeto1  Projeto1'
+        'Projeto2 Projeto3'
+        'Projeto4 Projeto4';
+        gap: 20px;
+        padding: 5% 0;
+    }
+
+    #Divisoria img{
+        width: 50px;
+    }
+    #About_container {
+        width: 90%;
+    }
+    #Contact {
+        width: 100%;
+        height: 100vh;
+        background-color: #5c090909;
+        display: grid;
+        grid-template-areas:
+            'Title Title'
+            'Form Form'
+            'Message Message';
+        grid-template-rows: 1fr 1fr 1fr; 
+        padding: 30% 0;
+    }
+    #ContactMessage{
+        justify-content: center;
+    }
+    #ContactForm input[type=submit] {
+        width: 20%;
+        height: 20%;
+        border-radius: 9px;
+        margin-bottom: 20%;
+        font-size: 1em;
+        color: #D7FFF5;
+        background-color: #00487C;
+        font-family: "Jaro", sans-serif;
+        font-optical-sizing: auto;
+    }
 }
