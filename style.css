@@ -117,8 +117,8 @@ header{
 
 #Divisoria{
     padding-left: 20%;
-    top: 96.5%;
-    position: absolute;
+
+    position: relative;
 }
 
 
@@ -683,6 +683,19 @@ footer img{
     }
     .BarSkillBlue p {
         line-height: 100%;
+    }
+}
+@media (max-height: 750px){
+    #BlueDetail{
+        width: 45%;
+        height: 32%;
+        background-color: #00487C;
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 50%;
+        position:absolute;
+        left: 0;
+        z-index: 0;
+    
     }
 }
 
