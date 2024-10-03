@@ -3,6 +3,7 @@ function loadpage(){
     isOnScreen()
 }
 
+let lightmode = false
 
 
 let i = 0
@@ -49,9 +50,13 @@ function isOnScreen(){
         Array.from(entries).forEach(entry => {
             if (entry.intersectionRatio >= 1) { 
                 entry.target.classList.add('animacaoSkillBar')
+            
 
-        }
+            }else if(entry.intersectionRatio <= 0){
+                entry.target.classList.remove('animacaoSkillBar')
+            }
         })
+
         }, {
         threshold: [0, .5, 1]
         })
@@ -61,3 +66,23 @@ function isOnScreen(){
         })
 }
 
+function ChangeThemeButton(){
+    if(!lightmode){
+        lightmode = true
+        let modoAtual = document.querySelector('#SUN')
+        let ProximoModo = document.querySelector('#MOON')
+        modoAtual.classList.add('Mode')
+        ProximoModo.classList.remove('Mode')
+    }else{
+        lightmode = false
+
+        let modoAtual = document.querySelector('#MOON')
+        let ProximoModo = document.querySelector('#SUN')
+        modoAtual.classList.add('Mode')
+        ProximoModo.classList.remove('Mode')
+    }
+
+    
+    console.log(lightmode)
+
+}

@@ -1,5 +1,8 @@
 
 
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,8 +12,9 @@
 }
 a{
     text-decoration: none;
-    color: #D7FFF5;
+    color: var(--FontDefault);
     transition: 0.9s;
+    cursor: pointer;
 }
 a:hover{
     color: rgb(60, 21, 97);
@@ -24,18 +28,36 @@ a:hover{
 
 
 i{
-    color: white;
+    color: var(--FontDefault);
 }
 html{
     scroll-behavior: smooth;
     width: 100%;
 }
 body{
+    --Background: #d2f7ed;
+    --FontDefault:  #143b31;
+    --Buttons: #0d1a24;
+    --ContactBackground: #5c090909;
+    --DarkBackground: rgba(0, 0, 0, 0.144);
+    --TitleAbout: #04251D;
+    --ColorAboutContainer: #cfcfcf;
+
+/* 
+    --Background: #152B25;
+    --FontDefault:  #D7FFF5;
+    --Buttons: #00487C;
+    --ContactBackground: #5c090909;
+    --DarkBackground: rgba(0, 0, 0, 0.322);
+    --TitleAbout: #04251D;
+    --ColorAboutContainer: #969C94; */
+
+
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
     font-style: normal;
-    background-color: #152B25;
-    color: #D7FFF5;
+    background-color: var(--Background);
+    color: var(--FontDefault);
     height: 100vh;
     width: 100vw;
     overflow-x: hidden; 
@@ -56,10 +78,18 @@ header{
 #HeaderSpace{
     width: 60%;
 }
+
+.Mode{
+    display: none;
+}
+
+
+
+
 .main{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.322);
+    background-color: var(--DarkBackground);
     background-blend-mode: multiply;
     background-image: url(imgs/fundo\ 1.png) ;
     background-repeat: no-repeat;
@@ -111,7 +141,7 @@ header{
     margin: 0px 20px;
     border-radius: 9px;
     padding: 10px 20px;
-    background-color: #00487C;
+    background-color: var(--Buttons);
     transition: 0.9s;
 }
 
@@ -129,7 +159,7 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.322);
+    background-color: var(--DarkBackground);
     background-blend-mode: multiply;
 }
 
@@ -165,7 +195,7 @@ header{
     grid-area: Projeto4;
 }
 .projetoarea{
-    background-color: #D7FFF5;
+    background-color: var(--FontDefault);
     border-radius: 9px;
     transition: 0.9s;
 }
@@ -187,7 +217,7 @@ header{
     margin: 5% 0;
     width: 60%;
     height: 70%;
-    background-color: #7C7E76;
+    background-color: var(--ColorAboutContainer);
     border-radius: 9px;
     display: grid;
     grid-template-areas:'TitleA ImageA'
@@ -208,7 +238,7 @@ header{
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 6em;
-    color: #04251D;
+    color: var(--TitleAbout);
 }
 #ImageAbout{
     grid-area: ImageA;
@@ -247,7 +277,7 @@ header{
 .LinhaDivAbout{
     height: 2px;
     
-    background-color: #D7FFF5;
+    background-color: var(--FontDefault);
 }
 #linhas{
     width: 100%;
@@ -327,7 +357,7 @@ header{
 .BarSkillDiv{
     height: 0.2em;
     width: 90%;
-    background-color: #D7FFF5;
+    background-color: var(--FontDefault);
 }
 .BarSkillComplete{
     height: 100%;
@@ -377,7 +407,7 @@ header{
 #Contact{
     width: 100%;
     height: 100vh;
-    background-color: #5c090909;
+    background-color: var(--ContactBackground);
     display: grid;
     grid-template-areas: 
     'Title Title'
@@ -415,7 +445,7 @@ header{
     border-radius: 9px;
     margin-bottom: 20px;
     color: #000000;
-    background-color: #D7FFF5;
+    background-color: var(--FontDefault);
     text-align: center;
     font-size: 24px;
 }
@@ -425,7 +455,7 @@ header{
     border-radius: 9px;
     margin-bottom: 20%;
     font-size: 32px;
-    color: #D7FFF5;
+    color: var(--FontDefault);
     background-color: #00487C;
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
@@ -442,7 +472,7 @@ header{
     border-radius: 9px;
     margin-bottom: 20%;
     color: #000000;
-    background-color: #D7FFF5;
+    background-color: var(--FontDefault);
     text-align: start;
     font-size: 24px;
     padding: 2%;
@@ -486,7 +516,7 @@ footer img{
         font-optical-sizing: auto;
         font-style: normal;
         font-size: 5em;
-        color: #04251D;
+        color: var(--TitleAbout);
     }
     .BarSkillBlue p{
         width: 40%;
@@ -508,7 +538,7 @@ footer img{
     #BlueDetail{
         width: 32%;
         height: 80%;
-        background-color: #00487C;
+        background-color: var(--Buttons);
         border-top-right-radius: 30%;
         border-bottom-right-radius: 50%;
         position:absolute;
@@ -545,7 +575,7 @@ footer img{
         font-optical-sizing: auto;
         font-style: normal;
         font-size: 4em;
-        color: #04251D;
+        color: var(--TitleAbout);
     }
     #TextAbout p{
         margin: 5% 5%;
@@ -590,7 +620,7 @@ footer img{
     #BlueDetail{
         width: 50%;
         height: 80%;
-        background-color: #00487C;
+        background-color: var(--Buttons);
         border-top-right-radius: 30%;
         border-bottom-right-radius: 50%;
         position:absolute;
@@ -615,7 +645,7 @@ footer img{
         font-optical-sizing: auto;
         font-style: normal;
         font-size: 3em;
-        color: #04251D;
+        color: var(--TitleAbout);
     }
     #TextMain H1{
             line-height: 1em;
@@ -685,14 +715,11 @@ footer img{
         line-height: 100%;
     }
 }
-
-
-
-@media (max-width: 600px){
+@media (max-height: 750px){
     #BlueDetail{
         width: 45%;
         height: 32%;
-        background-color: #00487C;
+        background-color: var(--Buttons);
         border-top-right-radius: 30%;
         border-bottom-right-radius: 50%;
         position:absolute;
@@ -700,7 +727,9 @@ footer img{
         z-index: 0;
     
     }
+}
 
+@media (max-width: 600px){
     #TextAbout p{
         font-size: 0.6em;
     }
@@ -793,7 +822,7 @@ footer img{
     #Contact {
         width: 100%;
         height: 100vh;
-        background-color: #5c090909;
+        background-color: var(--ContactBackground);
         display: grid;
         grid-template-areas:
             'Title Title'
@@ -811,8 +840,8 @@ footer img{
         border-radius: 9px;
         margin-bottom: 20%;
         font-size: 1em;
-        color: #D7FFF5;
-        background-color: #00487C;
+        color: var(--FontDefault);
+        background-color: var(--Buttons);
         font-family: "Jaro", sans-serif;
         font-optical-sizing: auto;
     }
