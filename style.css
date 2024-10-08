@@ -102,7 +102,7 @@ header{
     height: 100vh;
     background-color: var(--DarkBackground);
     background-blend-mode: multiply;
-    background-image: url(imgs/fundo\ 2.png) ;
+    background-image: url(imgs/Fundo\ 2.png) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
