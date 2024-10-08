@@ -59,10 +59,6 @@ html{
 
 
 body{
-
-
-
-
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
     font-style: normal;
@@ -455,8 +451,8 @@ header{
     height: 10%;
     border-radius: 9px;
     margin-bottom: 20px;
-    color: #000000;
-    background-color: var(--FontDefault);
+    color: var(--FontDefault);
+    background-color: var(--ColorAboutContainer);
     text-align: center;
     font-size: 24px;
 }
@@ -483,7 +479,7 @@ header{
     border-radius: 9px;
     margin-bottom: 20%;
     color: #000000;
-    background-color: var(--FontDefault);
+    background-color: var(--ColorAboutContainer);
     text-align: start;
     font-size: 24px;
     padding: 2%;
@@ -495,6 +491,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--FontDefault);
 }
 #FooterLogos{
     display: flex;
@@ -787,7 +784,7 @@ footer img{
     }
     .main{
         background-color: rgba(0, 0, 0, 0.781);
-        background-image: url(imgs/image\ 3.png) ;
+        background-image: url(imgs/image\ 3.png);
     }
     #mainText{
         padding: 10% 15%;
