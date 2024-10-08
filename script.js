@@ -3,8 +3,6 @@ function loadpage(){
     isOnScreen()
 }
 
-let lightmode = false
-
 
 let i = 0
 let write = true
@@ -85,4 +83,13 @@ function ChangeThemeButton(){
     
     console.log(lightmode)
 
+}
+document.body.style.setProperty('--Background', '#152B25')
+
+function ChangeWhite(){
+    document.documentElement.style.setProperty('--Background', rgb(208, 211, 200))
+}
+
+function ChangeDark(){
+    
 }

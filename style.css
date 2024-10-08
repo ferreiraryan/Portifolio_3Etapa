@@ -35,13 +35,15 @@ html{
     width: 100%;
 }
 body{
-    --Background: #d2f7ed;
-    --FontDefault:  #143b31;
-    --Buttons: #0d1a24;
+    --Background: rgb(208, 211, 200);
+    --FontDefault:  #020000ff;
+    --Buttons: #164b91;
     --ContactBackground: #5c090909;
-    --DarkBackground: rgba(0, 0, 0, 0.144);
+    --DarkBackground: rgba(0, 0, 0, 0.048);
     --TitleAbout: #04251D;
-    --ColorAboutContainer: #cfcfcf;
+    --ColorAboutContainer: #7561616c;
+    --BackgroundHeader: rgba(223, 223, 223, 0.548);
+    --BackgroundFooter: #1b6ca7;
 
 /* 
     --Background: #152B25;
@@ -50,7 +52,8 @@ body{
     --ContactBackground: #5c090909;
     --DarkBackground: rgba(0, 0, 0, 0.322);
     --TitleAbout: #04251D;
-    --ColorAboutContainer: #969C94; */
+    --ColorAboutContainer: #969C94;
+    --BackgroundFooter: #061927; */
 
 
     font-family: "Jaro", sans-serif;
@@ -68,6 +71,7 @@ header{
     font-size: 1.8em;
     padding: 20px 20%;
     display: flex;
+    background-color: var(--BackgroundHeader);
     
 }
 
@@ -91,7 +95,7 @@ header{
     height: 100vh;
     background-color: var(--DarkBackground);
     background-blend-mode: multiply;
-    background-image: url(imgs/fundo\ 1.png) ;
+    background-image: url(imgs/fundo\ 2.png) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -324,7 +328,7 @@ header{
 #BlueDetail{
     width: 32%;
     height: 80%;
-    background-color: #00487C;
+    background-color: var(--Buttons);
     border-top-right-radius: 40%;
     border-bottom-right-radius: 50%;
     position:absolute;
@@ -456,7 +460,7 @@ header{
     margin-bottom: 20%;
     font-size: 32px;
     color: var(--FontDefault);
-    background-color: #00487C;
+    background-color: var(--Buttons);
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
 
@@ -479,7 +483,7 @@ header{
 }
 footer{
     height: 40vh;
-    background-color: #061927;
+    background-color: var(--BackgroundFooter);
     display: flex;
     justify-content: center;
     align-items: center;
