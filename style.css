@@ -34,7 +34,18 @@ html{
     scroll-behavior: smooth;
     width: 100%;
 }
-body{
+.darkmode{
+    --Background: #152B25;
+    --FontDefault:  #D7FFF5;
+    --Buttons: #00487C;
+    --ContactBackground: #5c090909;
+    --DarkBackground: rgba(0, 0, 0, 0.322);
+    --TitleAbout: #04251D;
+    --ColorAboutContainer: #969C94;
+    --BackgroundFooter: #061927;
+}
+
+.whitemode{
     --Background: rgb(208, 211, 200);
     --FontDefault:  #020000ff;
     --Buttons: #164b91;
@@ -44,16 +55,12 @@ body{
     --ColorAboutContainer: #7561616c;
     --BackgroundHeader: rgba(223, 223, 223, 0.548);
     --BackgroundFooter: #1b6ca7;
+}
 
-/* 
-    --Background: #152B25;
-    --FontDefault:  #D7FFF5;
-    --Buttons: #00487C;
-    --ContactBackground: #5c090909;
-    --DarkBackground: rgba(0, 0, 0, 0.322);
-    --TitleAbout: #04251D;
-    --ColorAboutContainer: #969C94;
-    --BackgroundFooter: #061927; */
+
+body{
+
+
 
 
     font-family: "Jaro", sans-serif;

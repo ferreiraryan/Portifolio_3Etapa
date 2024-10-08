@@ -9,6 +9,8 @@ let write = true
 let Hello = true
 let TextoFinal = "Esse é Ryan..."
 let textoCortado = ''
+let lightmode = false
+
 function textAnimation(){
     if(write){
         TextWrite()
@@ -79,17 +81,19 @@ function ChangeThemeButton(){
         modoAtual.classList.add('Mode')
         ProximoModo.classList.remove('Mode')
     }
-
+    chageTheme(lightmode)
     
     console.log(lightmode)
 
 }
-document.body.style.setProperty('--Background', '#152B25')
+// console.log(element)
 
-function ChangeWhite(){
-    document.documentElement.style.setProperty('--Background', rgb(208, 211, 200))
-}
 
-function ChangeDark(){
-    
+function chageTheme(LIGHTMODE){
+    let element = document.body;
+    if(LIGHTMODE){
+        element.className = 'whitemode'
+    }else{
+        element.className = 'darkmode'
+    }
 }

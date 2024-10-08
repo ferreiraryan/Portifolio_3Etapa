@@ -1,205 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    
-    <script src="https://kit.fontawesome.com/07f8344855.js" crossorigin="anonymous"></script>
-</head>
-<body onload="loadpage()">
-    
-    <section class="main" >
-        <header>
-            <div class="HeaderButtons">
-                <a href="#"><p>Ryan</p></a>
-            </div class="HeaderButtons">
-            
-            <div id="HeaderSpace"></div>
-    
-            <div class="HeaderButtons hederleft">
-                <a href="#projetos"><p>Projects</p></a>
-            </div>
-            <div class="HeaderButtons hederleft">
-                <a href="#About-me"><p>About</p></a>
-            </div>
-            <div class="HeaderButtons hederleft">
-                <a href="#skills"><p>Skills</p></a>
-            </div>
-    
-            <div class="HeaderButtons hederleft">
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="HeaderButtons hederleft">
-                <a href="https://github.com/2Ryck5">
-                    <a href="#">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </a>
-            </div>
-
-            <div class="HeaderButtons hederleft Mode" id="MOON">
-                <a  onclick="ChangeThemeButton()" >
-                    <i class="fa-solid fa-moon"></i>
-                </a>
-            </div>
-
-            <div class="HeaderButtons hederleft" id="SUN">
-                <a onclick="ChangeThemeButton()">
-                    <i class="fa-regular fa-sun"></i>
-                </a>
-            </div>
-        </header>
-
-        <div id="mainText" class="sections">
-            <div>
-                <div id="TextMain">
-                    <h2>HELLO!</h2>
-                    <div id="animatedText" >
-                        <h1><span id="TextAnimation"></span></h1>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div id="ButtonsMain">
-                <div class="MainButton">
-                    <a href="">Sites</a>
-                    
-                </div>
-                <div class="MainButton">
-                    <a href="">Jogos</a>
-                </div>
-                <div class="MainButton">
-                    <a href="">Apps</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="Divisoria">
-            <img src="imgs/Rectangle 3.png" alt="">
-        </div>
-
-    </section>
-    <section id="projetos" class="sections">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
-        <h1>Alguns Projetos:</h1>
-        <div id="protejos_imgs">
-            <div id="projeto1" class="projetoarea"></div>
-            <div id="projeto2" class="projetoarea"></div>
-            <div id="projeto3" class="projetoarea"></div>
-            <div id="projeto4" class="projetoarea"></div>
-        </div>
+        
+        <script src="https://kit.fontawesome.com/07f8344855.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="loadpage()" class="darkmode">
+        
+        <section class="main" >
+            <header>
+                <div class="HeaderButtons">
+                    <a href="#"><p>Ryan</p></a>
+                </div class="HeaderButtons">
+                
+                <div id="HeaderSpace"></div>
+        
+                <div class="HeaderButtons hederleft">
+                    <a href="#projetos"><p>Projects</p></a>
+                </div>
+                <div class="HeaderButtons hederleft">
+                    <a href="#About-me"><p>About</p></a>
+                </div>
+                <div class="HeaderButtons hederleft">
+                    <a href="#skills"><p>Skills</p></a>
+                </div>
+        
+                <div class="HeaderButtons hederleft">
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="HeaderButtons hederleft">
+                    <a href="https://github.com/2Ryck5">
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </a>
+                </div>
 
-    </section>
-    <section id="About-me">
-        <div id="About_container">
-            <div id="TitleAbout"><h1>Sobre mim:</h1></div>
-            <div id="ImageAbout"> <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt=""></div>
-            <div id="TextAbout">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum repudiandae repellendus nulla voluptate! Corrupti excepturi aliquam vitae, harum eveniet debitis voluptate earum! Quod aperiam porro, quisquam fugiat ab dolore non.
-                    Labore magni modi eaque praesentium quibusdam deserunt. Placeat, perferendis amet assumenda fuga eaque blanditiis. Hic minus, consequatur beatae animi qui neque error dolorum! Eaque nisi iure eligendi ullam, officiis magnam.
-                    Aperiam itaque, iste recusandae doloribus, quos necessitatibus explicabo quibusdam nisi incidunt dicta praesentium voluptates quod numquam dolores nemo culpa neque quasi excepturi earum. Perspiciatis magni, assumenda aspernatur nam quae ipsam?
-                    Consequatur, ducimus facilis? Recusandae non consequuntur repellendus illo voluptatum, maxime nisi possimus saepe fugit necessitatibus, nihil fuga, minus quisquam? Tempore suscipit assumenda modi nesciunt labore dolor? Ipsa recusandae quasi quidem.
-                </p>
+                <div class="HeaderButtons hederleft Mode" id="MOON">
+                    <a  onclick="ChangeThemeButton()" >
+                        <i class="fa-solid fa-moon"></i>
+                    </a>
+                </div>
+
+                <div class="HeaderButtons hederleft" id="SUN">
+                    <a onclick="ChangeThemeButton()">
+                        <i class="fa-regular fa-sun"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div id="mainText" class="sections">
+                <div>
+                    <div id="TextMain">
+                        <h2>HELLO!</h2>
+                        <div id="animatedText" >
+                            <h1><span id="TextAnimation"></span></h1>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="ButtonsMain">
+                    <div class="MainButton">
+                        <a href="">Sites</a>
+                        
+                    </div>
+                    <div class="MainButton">
+                        <a href="">Jogos</a>
+                    </div>
+                    <div class="MainButton">
+                        <a href="">Apps</a>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-        <div id="linhas">
-            <div class="linha1 LinhaDivAbout"></div>
-            <div class=" linha2 LinhaDivAbout"></div>
-        </div>
-    </section>
-    <section id="skills">
-        <div id="ContainerSkills">
-            <div id="TitleSkills">
-                <h1>Skills</h1>
+            <div id="Divisoria">
+                <img src="imgs/Rectangle 3.png" alt="">
             </div>
-            <div id="TextSkills">
-                <div id="BlueDetail"></div>
-                <div class="BarSkillBlue"><p>Python</p></div>
-                <div class="BarSkillBlue"><p>c#</p></div>
-                <div class="BarSkillBlue"><p>HTML/CSS </p></div>
-                <div class="BarSkillBlue"><p>JavaScript</p></div>
-                <div class="BarSkillBlue"><p>Photoshop </p></div>
-                <div class="BarSkillBlue"><p>Linux</p></div>
-                <div class="BarSkillBlue"></div>
-            </div>
-            <div id="RangeSkills">
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete python"></div>
-                    </div>
-                </div>
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete csharp "></div>
-                    </div>
-                </div>
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete html"></div>
-                    </div>
-                </div>
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete js"></div>
-                    </div>
-                </div>
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete photoshop"></div>
-                    </div>
-                </div>
-                <div class="BarSkill">
-                    <div class="BarSkillDiv">
-                        <div class="BarSkillComplete linux"></div>
-                    </div>
-                </div>
-                <div class="BarSkill"></div>
-            </div>
-            <div id="SpaceSkills"></div>
+
+        </section>
+        <section id="projetos" class="sections">
             
-        </div>
-        <div></div>
-    </section>
-    <section id="Contact">
-        <div id="ContactTitle"><h1>Entre em contato</h1></div>
-        <div id="ContactForm">
-            <form action="">
-                <input type="text" placeholder="Digite seu nome">
-                <input type="email" placeholder="Digite seu email">
-                <input type="submit">
-            </form>
-        </div>
-        <div id="ContactMessage">
-            <textarea name="" id="" placeholder="Digite sua mensagem"></textarea>
-        </div>
-    </section>
-    <footer>
-        <div id="FooterLogos">
-            <a href="#"><i class="fa-brands fa-instagram fa-footer"></i></a>
-           
-            <div id="spacefooter"></div>
-            <a href=""><i class="fa-brands fa-github fa-footer"></i></a>
-        </div>
-        <p>(31) 9 8580-0443</p>
-        <p>ryanferreira4883@gmail.com</p>
-    </footer>
+            <h1>Alguns Projetos:</h1>
+            <div id="protejos_imgs">
+                <div id="projeto1" class="projetoarea"></div>
+                <div id="projeto2" class="projetoarea"></div>
+                <div id="projeto3" class="projetoarea"></div>
+                <div id="projeto4" class="projetoarea"></div>
+            </div>
 
-    
-</body>
+        </section>
+        <section id="About-me">
+            <div id="About_container">
+                <div id="TitleAbout"><h1>Sobre mim:</h1></div>
+                <div id="ImageAbout"> <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt=""></div>
+                <div id="TextAbout">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum repudiandae repellendus nulla voluptate! Corrupti excepturi aliquam vitae, harum eveniet debitis voluptate earum! Quod aperiam porro, quisquam fugiat ab dolore non.
+                        Labore magni modi eaque praesentium quibusdam deserunt. Placeat, perferendis amet assumenda fuga eaque blanditiis. Hic minus, consequatur beatae animi qui neque error dolorum! Eaque nisi iure eligendi ullam, officiis magnam.
+                        Aperiam itaque, iste recusandae doloribus, quos necessitatibus explicabo quibusdam nisi incidunt dicta praesentium voluptates quod numquam dolores nemo culpa neque quasi excepturi earum. Perspiciatis magni, assumenda aspernatur nam quae ipsam?
+                        Consequatur, ducimus facilis? Recusandae non consequuntur repellendus illo voluptatum, maxime nisi possimus saepe fugit necessitatibus, nihil fuga, minus quisquam? Tempore suscipit assumenda modi nesciunt labore dolor? Ipsa recusandae quasi quidem.
+                    </p>
+                </div>
+
+            </div>
+            <div id="linhas">
+                <div class="linha1 LinhaDivAbout"></div>
+                <div class=" linha2 LinhaDivAbout"></div>
+            </div>
+        </section>
+        <section id="skills">
+            <div id="ContainerSkills">
+                <div id="TitleSkills">
+                    <h1>Skills</h1>
+                </div>
+                <div id="TextSkills">
+                    <div id="BlueDetail"></div>
+                    <div class="BarSkillBlue"><p>Python</p></div>
+                    <div class="BarSkillBlue"><p>c#</p></div>
+                    <div class="BarSkillBlue"><p>HTML/CSS </p></div>
+                    <div class="BarSkillBlue"><p>JavaScript</p></div>
+                    <div class="BarSkillBlue"><p>Photoshop </p></div>
+                    <div class="BarSkillBlue"><p>Linux</p></div>
+                    <div class="BarSkillBlue"></div>
+                </div>
+                <div id="RangeSkills">
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete python"></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete csharp "></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete html"></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete js"></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete photoshop"></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill">
+                        <div class="BarSkillDiv">
+                            <div class="BarSkillComplete linux"></div>
+                        </div>
+                    </div>
+                    <div class="BarSkill"></div>
+                </div>
+                <div id="SpaceSkills"></div>
+                
+            </div>
+            <div></div>
+        </section>
+        <section id="Contact">
+            <div id="ContactTitle"><h1>Entre em contato</h1></div>
+            <div id="ContactForm">
+                <form action="">
+                    <input type="text" placeholder="Digite seu nome">
+                    <input type="email" placeholder="Digite seu email">
+                    <input type="submit">
+                </form>
+            </div>
+            <div id="ContactMessage">
+                <textarea name="" id="" placeholder="Digite sua mensagem"></textarea>
+            </div>
+        </section>
+        <footer>
+            <div id="FooterLogos">
+                <a href="#"><i class="fa-brands fa-instagram fa-footer"></i></a>
+            
+                <div id="spacefooter"></div>
+                <a href=""><i class="fa-brands fa-github fa-footer"></i></a>
+            </div>
+            <p>(31) 9 8580-0443</p>
+            <p>ryanferreira4883@gmail.com</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
