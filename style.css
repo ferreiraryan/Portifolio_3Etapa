@@ -763,6 +763,9 @@ footer img{
     }
 }
 @media (max-width: 500px){
+    #TextMain{
+        color: white;
+    }
     #TextMain H1{
         font-size: 4em;
     }
