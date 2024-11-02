@@ -97,3 +97,24 @@ function chageTheme(LIGHTMODE){
         element.className = 'darkmode'
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.secoes');
+
+    // Função que verifica se uma section está visível na viewport
+    function revealSection() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            // Verifica se a section está na área visível
+            if (sectionTop < windowHeight - 100) {
+                section.classList.add('secoes-visible');
+            }
+        });
+    }
+
+    // Executa a função ao carregar a página e ao rolar
+    window.addEventListener('scroll', revealSection);
+    revealSection(); // Para revelar as sections iniciais ao carregar a página
+});
+
