@@ -166,8 +166,7 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--DarkBackground);
-    background-blend-mode: multiply;
+
 }
 
 #projetos h1{
@@ -178,22 +177,30 @@ header{
     font-size: 6em
 }
 
-#protejos_imgs{
+#projetos_imgs{
+    gap: 10px;
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-areas: 
     'Projeto1 Projeto2 Projeto3'
     'Projeto1 Projeto4 Projeto4';
-    gap: 20px;
+    /* gap: 20px; */
     padding: 5% 0;
 }
 
+
 #projeto1{
     grid-area: Projeto1;
+    background-image: url(imgs/Projeto1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #projeto2{
     grid-area: Projeto2;
+    background-image: url(imgs/Projeto2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #projeto3{
     grid-area: Projeto3;
@@ -205,10 +212,35 @@ header{
     background-color: var(--FontDefault);
     border-radius: 9px;
     transition: 0.9s;
+    filter: opacity(80%);
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+}
+.projeto-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 80%;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 8px;
+}
+
+.projetoarea:hover .projeto-texto {
+    opacity: 1;
 }
 .projetoarea:hover{
+    z-index: 2;
     transform: scale(1.1);
     background-color: #f2fffc;
+    filter: opacity(100%);
+    background-blend-mode: multiply;
 }
 /* ABOUT */
 #About-me{
