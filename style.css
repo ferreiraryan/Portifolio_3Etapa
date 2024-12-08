@@ -80,7 +80,9 @@ header{
 
 .HeaderButtons{
     padding: 0 20px;
+    user-select: none;
 }
+
 
 #HeaderSpace{
     width: 60%;
@@ -151,6 +153,10 @@ header{
     background-color: var(--Buttons);
     transition: 0.9s;
 }
+.MainButton a{
+    cursor: default;
+    user-select: none;
+}
 
 #Divisoria{
     padding-left: 20%;
@@ -204,6 +210,9 @@ header{
 }
 #projeto3{
     grid-area: Projeto3;
+    background-image: url(imgs/Projeto3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #projeto4{
     grid-area: Projeto4;
@@ -635,7 +644,7 @@ footer img{
         font-style: normal;
         font-size: 4em
     }
-    #protejos_imgs{
+    #projetos_imgs{
         display: grid;
         width: 100%;
         height: 100%;
@@ -839,12 +848,11 @@ footer img{
         height: 20%;
         align-items: center;
         justify-content: center;
-
     }
     #projetos{
         padding: 0 5%;
     }
-    #protejos_imgs{
+    #projetos_imgs{
         display: grid;
         width: 100%;
         height: 100%;
